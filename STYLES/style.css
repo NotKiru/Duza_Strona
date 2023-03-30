@@ -25,6 +25,7 @@ h1 {
 }
 
 body {
+    overflow-x: hidden;
     background-color: rgb(14, 2, 2);
     margin: 0;
     min-height: 100vh;
@@ -53,34 +54,50 @@ body {
     background-color: var(--secondary-col);
     color: var(--primary-col);
 }
+#banerLewy, #banerPrawy {
+     overflow: hidden;
+}
 
-#baner {
-    background-image: url("../IMG/baner.jpg");
+#bg-image {
     background-position: center;
-    background-size: cover;
+    width: 100vw;
+    background-size: 100vw 100vh;
     min-height: 60.5rem;
     display: grid;
-    align-items: center;
-    justify-items: center;
+    place-items: center;
 }
 
-#baner div {
-    max-width: 70rem;
-    background-image: url("../IMG/baner.jpg");
+#bg-image div {
+    width: 60vw;
     background-position: center;
-    background-size: 300% 300%;
-    padding: 60px;
+    background-size: 165% 500%;
+    margin: 0px 20vw;
     border-radius: 10px;
     box-shadow: 0px 0px 10px #000;
-
 }
-
-#baner h1 {
+#banerLewy {
+     position: absolute;     
+     border-right: 6px solid rgb(167, 0, 0);
+     transition: 300ms;
+}
+#banerLewy #bg-image{
+    background-image: url("../IMG/baner.png");
+}
+#banerPrawy #bg-image {
+    background-image: url("../IMG/baner2.jpg");
+}
+#banerLewy #bg-image div{
+    background-image: url("../IMG/baner.png");
+}
+#banerPrawy #bg-image div{
+    background-image: url("../IMG/baner2.jpg");
+}
+#banerLewy h1, #banerPrawy h1 {
     text-align: center;
     font-size: 3rem;
 }
 
-#baner p {
+#banerLewy p,#banerPrawy p {
     text-align: center;
     font-size: 1rem;
 }
@@ -104,6 +121,7 @@ p {
     margin: auto;
 }
 .cos>.container {
+    max-width: 60%;
     padding: calc(var(--bs-gutter-x) * 1);
 }
 .cos:has(form) {
@@ -127,6 +145,7 @@ p {
 .item img {
     box-shadow: 0px 0px 0px var(--warning-col);
     border-radius: 20px;
+    border: 2px solid var(--warning-col);
     height: 100%;
     width: 100%;
     transition: 300ms;
