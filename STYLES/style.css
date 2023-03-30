@@ -78,7 +78,7 @@ body {
 #banerLewy {
      position: absolute;     
      border-right: 6px solid rgb(167, 0, 0);
-     transition: 300ms;
+     transition: 50ms;
 }
 #banerLewy #bg-image{
     background-image: url("../IMG/baner.png");
