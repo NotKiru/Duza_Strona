@@ -6,7 +6,7 @@ const onMove = e => {
     lewa.style.setProperty("width", p+"%");
 }
 
-lewa.onmousemove = e => onMove(e);
+lewa.onmousemove= e => onMove(e);
 prawa.onmousemove = e => onMove(e);
 
 lewa.ontouchmove = e => onMove(e.touches[0]);
